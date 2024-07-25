@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+      <PackageReference Include="EntityFrameworkCore.UseRowNumberForPaging" Version="0.4.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.DynamicLinq" Version="6.2.25" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.2" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.2" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.2">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      </PackageReference>  
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.2">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      </PackageReference>  
+      <PackageReference Include="Thinktecture.EntityFrameworkCore.SqlServer" Version="3.1.2" />          
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Api.Domain\Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="Repository\" />
+  </ItemGroup>
+</Project>
