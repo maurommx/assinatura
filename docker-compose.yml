@@ -5,7 +5,7 @@ services:
     container_name: api-assinatura
     build:
       dockerfile: Dockerfile
-    image: api-polycron:latest
+    image: api-assinatura:latest
     restart: unless-stopped
     volumes:
       - /etc/localtime:/etc/localtime:ro
