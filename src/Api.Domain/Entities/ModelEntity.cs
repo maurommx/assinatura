@@ -15,6 +15,5 @@ namespace Domain.Entities
         [Required]
         [MaxLength(50)]
         public string Description { get; set; }
-        public virtual IEnumerable<AccessEntity> Access { get; set; }
     }
 }

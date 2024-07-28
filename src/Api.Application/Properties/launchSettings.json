@@ -5,10 +5,6 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "Database_Name": "Poly",
-        "Database_Host": "127.0.0.1, 2354",
-        "Database_Username": "sa",
-        "Database_Password": "P@ssword00",
       }
     },
     "application": {
@@ -16,10 +12,6 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "Database_Name": "Poly",
-        "Database_Host": "127.0.0.1, 2354",
-        "Database_Username": "sa",
-        "Database_Password": "P@ssword00"
       },
       "applicationUrl": "http://localhost:5000"
     },

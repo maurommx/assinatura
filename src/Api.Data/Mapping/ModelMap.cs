@@ -25,11 +25,6 @@ namespace Data.Mapping
                    .IsRequired()
                    .HasMaxLength(50);
 
-            builder.HasMany(m => m.Access)
-                   .WithOne(a => a.Model)
-                   .HasForeignKey(a => a.IdModel)
-                   .HasPrincipalKey(a => a.Id)
-                   ;
         }
     }
 }

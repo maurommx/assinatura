@@ -14,6 +14,7 @@ using AutoMapper;
 using Domain.Security;
 using application.Schemas;
 using System.Text.Json.Serialization;
+using Api.CrossCutting.DependencyInjection;
 
 namespace application
 {
@@ -48,6 +49,8 @@ namespace application
                 options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
                 options.JsonSerializerOptions.WriteIndented = true;
             });
+
+            ConfigureService.ConfigureDependenciesService(services);
 
             var config = new AutoMapper.MapperConfiguration(cfg =>
             {
@@ -106,7 +109,7 @@ namespace application
 
             services.AddSwaggerGen(c =>
             {
-                c.SchemaFilter<EnumSchemaFilter>();
+                //c.SchemaFilter<EnumSchemaFilter>();
 
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {

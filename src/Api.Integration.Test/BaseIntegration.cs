@@ -4,7 +4,6 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Api.CrossCutting.Mappings;
 using Api.Data.Context;
-using Api.Domain.Dtos;
 using application;
 using AutoMapper;
 using Microsoft.AspNetCore.Hosting;
@@ -40,17 +39,17 @@ namespace Api.Integration.Test
 
         public async Task AdicionarToken()
         {
-            var loginDto = new LoginDto()
-            {
-                Email = "mfrinfo@mail.com"
-            };
+            //var loginDto = new LoginDto()
+            //{
+            //    Email = "mfrinfo@mail.com"
+            //};
 
-            var resultLogin = await PostJsonAsync(loginDto, $"{hostApi}login", client);
-            var jsonLogin = await resultLogin.Content.ReadAsStringAsync();
-            var loginObject = JsonConvert.DeserializeObject<LoginResponseDto>(jsonLogin);
+            //var resultLogin = await PostJsonAsync(loginDto, $"{hostApi}login", client);
+            //var jsonLogin = await resultLogin.Content.ReadAsStringAsync();
+            //var loginObject = JsonConvert.DeserializeObject<LoginResponseDto>(jsonLogin);
 
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer",
-                                                         loginObject.accessToken);
+            //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer",
+            //                                             loginObject.accessToken);
 
 
         }
